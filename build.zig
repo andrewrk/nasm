@@ -10,10 +10,10 @@ pub fn build(b: *std.Build) void {
         .optimize = optimize,
     });
     const t = exe.target_info.target;
-    exe.addIncludePath(.{ .path = "include" });
-    exe.addIncludePath(.{ .path = "asm" });
-    exe.addIncludePath(.{ .path = "x86" });
-    exe.addIncludePath(.{ .path = "output" });
+    exe.addIncludePath("include");
+    exe.addIncludePath("asm");
+    exe.addIncludePath("x86");
+    exe.addIncludePath("output");
     exe.addConfigHeader(b.addConfigHeader(.{
         .style = .blank,
         .include_path = "version.h",
