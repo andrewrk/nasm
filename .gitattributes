@@ -1,1 +1,2 @@
 /version -merge
+/config/config.h.in eol=LF
